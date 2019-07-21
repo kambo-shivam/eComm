@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">eComm</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="Cancel_Text">Cancel</string>
+    <string name="network_error">Opps! No internet connection... </string>
+    <string name="no_internet_error_msg">There might be a problem in the network connection</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="select_image">Select image</string>
+    <string name="press_back_button_to_exit">Press "Back" again to exit.</string>
+    <string name="btn_ok">OK</string>
+    <string name="grant_access">You need to grant access</string>
+    <string name="msg_permission_setting">You need to grant permissions by going to app setting.</string>
+    <string name="SETTINGS">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="signin_txt">Sign in to access your Orders, Wishlist and Recommendations</string>
+    <string name="email_mobile_no">Email/Mobile no.</string>
+    <string name="password_txt">Password</string>
+    <string name="forgot">forgot password?</string>
+    <string name="sign_in_txt">SIGN IN</string>
+    <string name="new_to_ecomm_signup">New to eComm? SIGNUP</string>
+    <string name="in_91">IN +91  </string>
+
+</resources>

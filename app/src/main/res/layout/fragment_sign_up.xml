@@ -1,0 +1,63 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.eComm.view.ui.fragments.SignUpFragment">
+
+        <include layout="@layout/toolbar_signup"></include>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="Mobile No."
+            android:textColor="@color/color_blue" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginLeft="@dimen/dp20"
+                android:editable="false"
+                android:text="@string/in_91" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20"
+            android:background="@drawable/border_signin"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="Join eComm"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/already_exist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20"
+            android:background="@drawable/white_border"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="Existing User? SIGN IN"
+            android:textColor="@color/color_blue"
+            android:textSize="@dimen/dp12"
+            android:textStyle="bold" />
+    </LinearLayout>
+</layout>

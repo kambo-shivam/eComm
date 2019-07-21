@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#2873F0</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="color_progress_end">#00ffffff</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_blue">#2873F0</color>
+    <color name="color_redish">#EF4B4D</color>
+    <color name="suffern_color">#EF4B4D</color>
+    <color name="light_blue">#3b9eef</color>
+    <color name="white_color">#FFFFFF</color>
+</resources>
