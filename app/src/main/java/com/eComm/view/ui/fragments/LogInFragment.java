@@ -33,6 +33,7 @@ public class LogInFragment extends BaseFragment implements View.OnClickListener 
         super.onViewCreated(view, savedInstanceState);
         mBinding.newToEcomSignup.setOnClickListener(this);
         mBinding.signIn.setOnClickListener(this);
+        mBinding.forgotPassword.setOnClickListener(this);
     }
 
     @Override
@@ -45,8 +46,15 @@ public class LogInFragment extends BaseFragment implements View.OnClickListener 
             case R.id.sign_in:
                 setHomeScreen();
                 break;
+            case R.id.forgot_password:
+                sendToOtpScreen();
         }
 
+    }
+
+    private void sendToOtpScreen() {
+        Fragment fragment = new OtpScreenFragment();
+        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.login_signup_frag, fragment).addToBackStack(null).commit();
     }
 
     private void setHomeScreen() {

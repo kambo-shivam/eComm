@@ -23,8 +23,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/color_blue"
-                android:imeOptions="actionNext"
                 android:hint="@string/email_mobile_no"
+                android:imeOptions="actionNext"
                 android:singleLine="true"
                 android:textSize="@dimen/sp_15" />
 
@@ -42,10 +42,10 @@
             <EditText
                 android:id="@+id/input_password"
                 android:layout_width="match_parent"
-                android:imeOptions="actionDone"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/color_blue"
                 android:hint="@string/password_txt"
+                android:imeOptions="actionDone"
                 android:singleLine="true"
                 android:textSize="@dimen/sp_15" />
 
@@ -67,6 +67,7 @@
             android:textSize="@dimen/sp_15" />
 
         <TextView
+            android:id="@+id/forgot_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp15"
@@ -100,9 +101,9 @@
             android:background="@drawable/white_border"
             android:gravity="center"
             android:padding="@dimen/dp5"
-            android:textStyle="bold"
             android:text="@string/new_to_ecomm_signup"
             android:textColor="@color/color_blue"
-            android:textSize="@dimen/dp14" />
+            android:textSize="@dimen/dp14"
+            android:textStyle="bold" />
     </LinearLayout>
 </layout>
