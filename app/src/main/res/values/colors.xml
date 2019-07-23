@@ -12,4 +12,6 @@
     <color name="col_white_two">#f7f7f7</color>
     <color name="white_color">#FFFFFF</color>
     <color name="col_black">#000000</color>
+    <color name="dark_grey">#B1B2B8</color>
+    <color name="light_grey">#D3D3D3</color>
 </resources>

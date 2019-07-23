@@ -20,32 +20,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <LinearLayout
+            <FrameLayout
+                android:id="@+id/home_frame_layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/color_blue"
-                android:orientation="vertical">
+                android:layout_height="match_parent">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp43"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="@dimen/dp10"
-                    android:layout_marginRight="@dimen/dp10"
-                    android:background="@drawable/search_background"
-                    android:drawableLeft="@drawable/search_icon"
-                    android:gravity="start"
-                    android:paddingLeft="@dimen/dp10"
-                    android:text="@string/search_for_product_brands_amp_more"
-                    android:textSize="@dimen/sp_15"
-                    android:visibility="visible" />
+            </FrameLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp10"
-                    android:background="@color/color_blue" />
-
-            </LinearLayout>
         </LinearLayout>
 
 
