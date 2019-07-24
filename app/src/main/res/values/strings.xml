@@ -38,5 +38,12 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="search_for_product_brands_amp_more"><![CDATA[Search For Product, Brands & More]]></string>
+    <string name="recommendations_for_you">Recommendations for you</string>
+    <string name="advertisement_txt">Advertisement</string>
+    <string name="trending_items_for_you">Trending Items for you</string>
+    <string name="deal_of_the_day">Deal of the Day</string>
+    <string name="view_all">View All</string>
+    <string name="item_in_cart_text">Item in your cart</string>
+    <string name="see_all">See All</string>
 
 </resources>

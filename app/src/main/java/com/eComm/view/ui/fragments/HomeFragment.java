@@ -1,24 +1,25 @@
 package com.eComm.view.ui.fragments;
 
-import android.content.Context;
 import android.databinding.DataBindingUtil;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.eComm.R;
 import com.eComm.databinding.FragmentHomeBinding;
+import com.eComm.view.ui.adapter.DealOfTheDayAdapter;
+import com.eComm.view.ui.adapter.ItemInCartAdapter;
 import com.eComm.view.ui.adapter.MainCategoryHorizontalAdapter;
 import com.eComm.view.ui.adapter.NewArrivalPageAdapter;
+import com.eComm.view.ui.adapter.TrendingAndRecomAdapter;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -28,9 +29,11 @@ import me.relex.circleindicator.CircleIndicator;
 public class HomeFragment extends Fragment {
     FragmentHomeBinding mBinding;
     MainCategoryHorizontalAdapter adapter;
+    TrendingAndRecomAdapter trendingAndRecomAdapter;
+    ItemInCartAdapter itemInCartAdapter;
+    DealOfTheDayAdapter dealOfTheDayAdapter;
     int[] img = new int[]{R.drawable.img123, R.drawable.img123,
             R.drawable.img123};
-    ;
     NewArrivalPageAdapter arrivalPageAdapter;
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
@@ -50,6 +53,34 @@ public class HomeFragment extends Fragment {
         setViewPagerAdapter();
         setPageChangeListener();
         setTimeForViewPager();
+        setTrendingItems();
+        setRecommendItemRecyclerView();
+        setDealOfTheDayRecyclerView();
+        showItemInCart();
+    }
+
+    private void showItemInCart() {
+        itemInCartAdapter = new ItemInCartAdapter(getContext());
+        mBinding.itemInCart.setLayoutManager(new GridLayoutManager(getContext(), 1));
+        mBinding.itemInCart.setAdapter(itemInCartAdapter);
+    }
+
+    private void setDealOfTheDayRecyclerView() {
+        dealOfTheDayAdapter = new DealOfTheDayAdapter(getContext());
+        mBinding.dealOfDayRecycler.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        mBinding.dealOfDayRecycler.setAdapter(dealOfTheDayAdapter);
+    }
+
+    private void setRecommendItemRecyclerView() {
+        trendingAndRecomAdapter = new TrendingAndRecomAdapter(getContext());
+        mBinding.idRecomItem.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+        mBinding.idRecomItem.setAdapter(trendingAndRecomAdapter);
+    }
+
+    private void setTrendingItems() {
+        trendingAndRecomAdapter = new TrendingAndRecomAdapter(getContext());
+        mBinding.idTrendingRecycler.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+        mBinding.idTrendingRecycler.setAdapter(trendingAndRecomAdapter);
     }
 
     private void setTimeForViewPager() {

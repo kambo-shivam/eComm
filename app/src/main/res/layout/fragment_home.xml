@@ -1,78 +1,313 @@
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/light_grey"
         android:orientation="vertical"
         tools:context="com.eComm.view.ui.fragments.HomeFragment">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/color_blue"
-            android:orientation="vertical">
+            android:scrollbars="none">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp43"
-                android:layout_gravity="center"
-                android:layout_marginLeft="@dimen/dp10"
-                android:layout_marginRight="@dimen/dp10"
-                android:background="@drawable/search_background"
-                android:drawableLeft="@drawable/search_icon"
-                android:gravity="start"
-                android:paddingLeft="@dimen/dp10"
-                android:text="@string/search_for_product_brands_amp_more"
-                android:textSize="@dimen/sp_15"
-                android:visibility="visible" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp10"
-                android:background="@color/color_blue" />
-
-
-        </LinearLayout>
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/horizontal_recycler_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-        </android.support.v7.widget.RecyclerView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp5">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp145"
-                android:background="@color/white_color">
-
-                <android.support.v4.view.ViewPager
-                    android:id="@+id/view_pager"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp145">
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_blue"
+                    android:orientation="vertical">
 
-                </android.support.v4.view.ViewPager>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp43"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:background="@drawable/search_background"
+                        android:drawableLeft="@drawable/search_icon"
+                        android:gravity="start"
+                        android:paddingLeft="@dimen/dp10"
+                        android:text="@string/search_for_product_brands_amp_more"
+                        android:textSize="@dimen/sp_15"
+                        android:visibility="visible" />
 
-                <me.relex.circleindicator.CircleIndicator
-                    android:id="@+id/circle_indicator"
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp10"
+                        android:background="@color/color_blue" />
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/horizontal_recycler_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp14"
-                    android:layout_below="@id/view_pager"
-                    android:layout_gravity="bottom"
-                    android:shadowColor="@color/color_blue"
-                    app:ci_drawable="@drawable/circle_indicator" />
+                    android:layout_height="@dimen/dp2"
+                    android:background="@drawable/white_border" />
 
-            </FrameLayout>
-        </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp145"
+                        android:background="@color/white_color">
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/view_pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp145">
+
+                        </android.support.v4.view.ViewPager>
+
+                        <me.relex.circleindicator.CircleIndicator
+                            android:id="@+id/circle_indicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp14"
+                            android:layout_below="@id/view_pager"
+                            android:layout_gravity="bottom"
+                            android:shadowColor="@color/color_blue"
+                            app:ci_drawable="@drawable/circle_indicator" />
+
+                    </FrameLayout>
+                </android.support.v7.widget.CardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/trending"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white_color"
+                        android:paddingLeft="@dimen/dp15"
+                        android:text="@string/trending_items_for_you"
+                        android:textColor="@color/col_black"
+                        android:textSize="@dimen/sp_15" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp2" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white_color"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/id_trending_recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp25"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp4"
+                            android:layout_marginBottom="@dimen/dp2"
+                            android:gravity="center"
+                            android:text="@string/see_all"
+                            android:textColor="@color/col_black"
+                            android:textSize="@dimen/sp17" />
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img123" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/advertisement_txt"
+                        android:textSize="@dimen/sp10" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/color_blue" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp2"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/text_deal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/dp14"
+                                android:text="@string/deal_of_the_day" />
+
+                            <TextView
+                                android:id="@+id/view_all"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:paddingLeft="@dimen/dp14"
+                                android:paddingEnd="@dimen/dp20"
+                                android:paddingRight="@dimen/dp20"
+                                android:text="@string/view_all" />
+
+
+                        </LinearLayout>
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/deal_of_day_recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp2"
+                            android:nestedScrollingEnabled="false">
+
+                        </android.support.v7.widget.RecyclerView>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/recomendations_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:background="@color/white_color"
+                        android:paddingLeft="@dimen/dp15"
+                        android:text="@string/recommendations_for_you"
+                        android:textColor="@color/col_black"
+                        android:textSize="@dimen/sp_15" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white_color"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/id_recom_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/dp20"
+                            android:text="@string/see_all"
+                            android:textColor="@color/col_black"
+                            android:textSize="@dimen/sp17" />
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_color"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:paddingLeft="@dimen/dp24"
+                        android:text="@string/item_in_cart_text"
+                        android:textColor="@color/col_black"
+                        android:textSize="@dimen/sp17" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:background="@color/white_color"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/item_in_cart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
 </layout>
